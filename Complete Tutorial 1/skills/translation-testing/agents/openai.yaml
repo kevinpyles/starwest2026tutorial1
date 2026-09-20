@@ -1,0 +1,4 @@
+interface:
+  display_name: "Translation Testing"
+  short_description: "Test translations and I18N behavior in Comparinator"
+  default_prompt: "Use $translation-testing to test Comparinator’s I18N functionality and report failures and coverage gaps."

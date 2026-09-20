@@ -1,0 +1,41 @@
+[
+  {
+    "browser": "chromium",
+    "status": "passed",
+    "catalogKeys": 47,
+    "coverage": [
+      "bidirectional catalog/placeholder parity",
+      "all marked text and attributes in both locales",
+      "state messages and plural forms",
+      "both result sides and Unicode preservation across 8 theme/option combinations",
+      "32 locale/theme/viewport layouts with expanded help",
+      "offline from navigation; no HTTP(S) requests or page errors"
+    ]
+  },
+  {
+    "browser": "firefox",
+    "status": "passed",
+    "catalogKeys": 47,
+    "coverage": [
+      "bidirectional catalog/placeholder parity",
+      "all marked text and attributes in both locales",
+      "state messages and plural forms",
+      "both result sides and Unicode preservation across 8 theme/option combinations",
+      "32 locale/theme/viewport layouts with expanded help",
+      "offline from navigation; no HTTP(S) requests or page errors"
+    ]
+  },
+  {
+    "browser": "webkit",
+    "status": "passed",
+    "catalogKeys": 47,
+    "coverage": [
+      "bidirectional catalog/placeholder parity",
+      "all marked text and attributes in both locales",
+      "state messages and plural forms",
+      "both result sides and Unicode preservation across 8 theme/option combinations",
+      "32 locale/theme/viewport layouts with expanded help",
+      "offline from navigation; no HTTP(S) requests or page errors"
+    ]
+  }
+]

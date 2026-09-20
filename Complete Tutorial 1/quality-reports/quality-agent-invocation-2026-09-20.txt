@@ -1,0 +1,4 @@
+- **Available and invoked:** `Comparinator-quality-agent`.
+- **Verdict:** Insufficient evidence for release readiness.
+- **Rationale:** The verbal test claim cannot be verified or tied to a candidate or baseline. No test report or supported-browser evidence establishes coverage. This does not establish a product defect.
+- **Boundaries respected:** No application inspection, testing, or file changes.

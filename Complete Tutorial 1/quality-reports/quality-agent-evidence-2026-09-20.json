@@ -1,0 +1,58 @@
+{
+  "assessed_at": "2026-09-20T03:26:58.606088+00:00",
+  "scope": [
+    ".codex/agents/Comparinator-quality-agent.toml",
+    "README.md"
+  ],
+  "baseline": "Conversation records addition of agent and README section; Git has no commits. No versioned baseline available.",
+  "sha256": {
+    ".codex/agents/Comparinator-quality-agent.toml": "62b643b4bd9d5101ffbb24311ad3a825683021faca4605c470f9e91577bf53cf",
+    "README.md": "958aa70449d78eb79ff555e1c9918eb7091218bbafbf479c6a39c0cd9070f7f6"
+  },
+  "configuration_validation": {
+    "toml_parse": "passed",
+    "required_fields": true,
+    "filename_matches_name": true
+  },
+  "behavior_evaluation": {
+    "method": "Independent generic subagent read the exact candidate instructions and applied six synthetic evidence packets; not a named-agent integration test.",
+    "cases": [
+      {
+        "case": "A",
+        "input": "Confirmed unsafe HTML rendering despite passed I18N tests",
+        "expected": "Not ready",
+        "observed": "Not ready"
+      },
+      {
+        "case": "B",
+        "input": "Changed comparison engine with only current I18N and stale engine evidence",
+        "expected": "Insufficient evidence",
+        "observed": "Insufficient evidence"
+      },
+      {
+        "case": "C",
+        "input": "Bounded typo change with current relevant review and runtime evidence",
+        "expected": "Ready",
+        "observed": "Ready"
+      },
+      {
+        "case": "D",
+        "input": "Bounded typo change plus documented permitted cosmetic risk",
+        "expected": "Ready with known risk",
+        "observed": "Ready with known risk"
+      },
+      {
+        "case": "E",
+        "input": "Observed data loss followed by passing retry, no investigation",
+        "expected": "Not ready",
+        "observed": "Not ready"
+      },
+      {
+        "case": "F",
+        "input": "Unidentified candidate and verbal passing-test claim",
+        "expected": "Insufficient evidence",
+        "observed": "Insufficient evidence"
+      }
+    ]
+  }
+}

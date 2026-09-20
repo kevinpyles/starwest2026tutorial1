@@ -1,0 +1,20 @@
+{
+  "name": "comparinator-automation",
+  "version": "1.0.0",
+  "description": "Open `index.html` in a modern browser. No install, internet connection, or server is needed. All processing happens locally.",
+  "main": "app.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:unit": "node compare.test.js",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report playwright-report",
+    "test:history": "node --test scripts/history-reporter.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  },
+  "private": true
+}

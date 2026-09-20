@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comparinator · Text comparison</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="compare.js" defer></script>
+  <script src="i18n.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><div class="brand"><span class="logo" aria-hidden="true">≋</span><span>comparinator</span><span class="edition"><span data-i18n="edition">TEXT COMPARISON / MARK 01</span></span></div><div class="header-controls"><button id="theme" class="quiet" aria-pressed="false">◈ Red Suit</button><div class="language-selector" role="group" aria-label="Language" data-i18n-aria-label="language"><button type="button" class="language-button" data-language="en" aria-label="English" title="English" aria-pressed="true" lang="en"><svg viewBox="0 0 60 40" aria-hidden="true"><path fill="#012169" d="M0 0h60v40H0z"/><path stroke="#fff" stroke-width="9" d="m0 0 60 40M60 0 0 40"/><path stroke="#c8102e" stroke-width="3" d="m0 0 60 40M60 0 0 40"/><path stroke="#fff" stroke-width="14" d="M30 0v40M0 20h60"/><path stroke="#c8102e" stroke-width="8" d="M30 0v40M0 20h60"/></svg><span>EN</span></button><button type="button" class="language-button" data-language="de" aria-label="Deutsch" title="Deutsch" aria-pressed="false" lang="de"><svg viewBox="0 0 60 40" aria-hidden="true"><path fill="#111" d="M0 0h60v14H0z"/><path fill="#d00" d="M0 13h60v14H0z"/><path fill="#ffce00" d="M0 26h60v14H0z"/></svg><span>DE</span></button></div></div></header>
+
+    <section class="glass workspace" aria-label="Text inputs" data-i18n-aria-label="inputsLabel">
+      <div class="section-heading"><h2><span class="section-number">01</span><span data-i18n="yourTexts">Your texts</span></h2><span class="local"><span data-i18n="privacy">◈ Everything stays on this device</span></span></div>
+      <div class="columns">
+        <div><div class="input-heading"><label for="text-a"><b class="badge">A</b> Text A</label><span id="count-a">0 / 10,000</span></div><textarea id="text-a" maxlength="10000" aria-describedby="count-a" placeholder="Paste or type your first text here…" data-i18n-placeholder="placeholderA" spellcheck="false"></textarea></div>
+        <div><div class="input-heading"><label for="text-b"><b class="badge">B</b> Text B</label><span id="count-b">0 / 10,000</span></div><textarea id="text-b" maxlength="10000" aria-describedby="count-b" placeholder="Paste or type your second text here…" data-i18n-placeholder="placeholderB" spellcheck="false"></textarea></div>
+      </div>
+      <div class="toolbar"><div class="options"><label><input type="checkbox" id="ignore-case"> <span data-i18n="ignoreCase">Ignore case</span></label><label><input type="checkbox" id="ignore-punctuation"> <span data-i18n="ignorePunctuation">Ignore punctuation</span></label></div><div class="actions"><button id="reset" class="quiet"><span data-i18n="reset">Reset</span></button><button id="compare" class="primary"><span data-i18n="compare">Compare texts</span> <span aria-hidden="true">↗</span></button></div></div>
+    </section>
+    <section class="stats" aria-label="Comparison statistics" data-i18n-aria-label="statsLabel">
+      <div class="glass stat"><span><span data-i18n="similarity">Similarity</span></span><strong id="similarity">—</strong><small><span data-i18n="sharedWords">Shared words, in order</span></small></div>
+      <div class="glass stat"><span><span data-i18n="wordCountA">Word count A</span></span><strong id="words-a">—</strong><small><span data-i18n="wordsFirst">Words in your first text</span></small></div>
+      <div class="glass stat"><span><span data-i18n="wordCountB">Word count B</span></span><strong id="words-b">—</strong><small><span data-i18n="wordsSecond">Words in your second text</span></small></div>
+      <div class="glass stat"><span><span data-i18n="accuracy">Accuracy · A / B</span></span><strong class="accuracy" id="accuracy">— / —</strong><small><span data-i18n="reference">Each text as the reference</span></small></div>
+    </section>
+    <section class="glass results"><div class="section-heading"><h2><span class="section-number">02</span><span data-i18n="comparison">The comparison</span></h2><div class="legend"><span class="same"><span data-i18n="matching">Matching</span></span><span class="different"><span data-i18n="different">Different</span></span></div></div><p id="status" role="status">Add your texts, then select Compare texts.</p><div class="columns"><div><h3><b class="badge">A</b> <span data-i18n="aWithB">A compared with B</span></h3><div id="result-a" class="result empty" aria-label="Text A comparison" data-i18n-aria-label="resultALabel">Your first text’s results will appear here.</div></div><div><h3><b class="badge">B</b> <span data-i18n="bWithA">B compared with A</span></h3><div id="result-b" class="result empty" aria-label="Text B comparison" data-i18n-aria-label="resultBLabel">Your second text’s results will appear here.</div></div></div><details><summary><span data-i18n="scoresHelp">How are the scores calculated?</span></summary><p><span data-i18n="similarityHelp">Words are separated by whitespace. Similarity is twice the number of matching words in sequence divided by the combined comparable word count. Reordered words can count as differences.</span></p><p><span data-i18n="accuracyHelp">Accuracy counts the minimum word insertions, deletions, and replacements. Each score is 100 × (1 − edits ÷ reference words), with a minimum of 0%. A uses Text A as the reference; B uses Text B. Two empty comparable texts score 100%; only one empty scores 0%.</span></p><p><span data-i18n="optionsHelp">Ignore options affect comparison scores, not the original word counts. Ignored punctuation remains visible; punctuation-only words appear unhighlighted when punctuation is ignored. Different words have a dotted underline as well as a red highlight.</span></p></details></section>
+    <footer><span><span data-i18n="footerTagline">Made for the details. And the occasional “aha.”</span></span><span><span data-i18n="footerPrivacy">No uploads. No accounts. Just your words.</span></span></footer>
+  </main>
+</body>
+</html>

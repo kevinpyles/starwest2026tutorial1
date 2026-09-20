@@ -1,0 +1,12 @@
+{
+  "started": "2026-09-20T03:05:58.427Z",
+  "duration": 11291.787,
+  "status": "passed",
+  "total": 18,
+  "expected": 18,
+  "unexpected": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "scope": "chromium, firefox, webkit | test tests/i18n.spec.js",
+  "id": "2026-09-20T03-05-58-427Z-b6c89fe2"
+}
